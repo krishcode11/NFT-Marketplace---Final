@@ -1,0 +1,224 @@
+.collection {
+    width: 100%;
+    position: relative;
+    padding: 3rem 0;
+    background: linear-gradient(
+      135deg,
+      #13151a 0%,
+      #1f2937 50%,
+      #13151a 100%
+    );
+    min-height: 10vh;
+  }
+  
+  .collection::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: url('/grid.svg') repeat;
+    opacity: 0.1;
+    pointer-events: none;
+  }
+  
+  .collection_filter {
+    width: 100%;
+    padding: 2rem 6%;
+    margin-top: 2rem;
+    position: relative;
+  }
+  
+  .collection_filter::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 2px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(99, 102, 241, 0.2),
+      rgba(168, 85, 247, 0.4),
+      rgba(99, 102, 241, 0.2),
+      transparent
+    );
+  }
+  
+  .collection_filter_box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 1.5rem;
+    padding: 1.2rem 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .collection_filter_box:hover {
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(99, 102, 241, 0.2);
+    border-color: rgba(99, 102, 241, 0.2);
+  }
+  
+  .collection_filter_box_icon {
+    font-size: 1.5rem;
+    background: linear-gradient(135deg, #6366f1, #a855f7);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 2px 4px rgba(99, 102, 241, 0.3));
+  }
+  
+  .collection_filter_box select {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+  }
+  
+  .collection_filter_box select:hover {
+    color: #a855f7;
+  }
+  
+  .collection_filter_box select option {
+    background: #1a1b1f;
+    color: #fff;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+  
+  .collection_nfts {
+    width: 100%;
+    padding: 4rem 6%;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .collection_nfts::before {
+    content: url('/grid.svg');
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(
+      circle at center,
+      rgba(99, 102, 241, 0.05) 0%,
+      transparent 70%
+    );
+    z-index: -1;
+  }
+  
+  /* Glassmorphism Card Effect */
+  .collection_card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .collection_card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.05),
+      transparent
+    );
+    transition: 0.5s;
+  }
+  
+  .collection_card:hover::before {
+    left: 100%;
+  }
+  
+  .collection_card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.3);
+    border-color: rgba(168, 85, 247, 0.3);
+  }
+  
+  /* Loading Animation */
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+  
+  .loading {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.03) 25%,
+      rgba(255, 255, 255, 0.05) 50%,
+      rgba(255, 255, 255, 0.03) 75%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 1024px) {
+    .collection_filter,
+    .collection_nfts {
+      padding: 2rem 4%;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .collection_filter_box {
+      padding: 1rem 1.5rem;
+    }
+  
+    .collection_filter_box select {
+      font-size: 1rem;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .collection {
+      padding: 2rem 0;
+    }
+  
+    .collection_filter_box {
+      padding: 0.8rem 1.2rem;
+      border-radius: 1rem;
+    }
+  
+    .collection_filter_box_icon {
+      font-size: 1.2rem;
+    }
+  
+    .collection_filter_box select {
+      font-size: 0.9rem;
+    }
+  }
+  

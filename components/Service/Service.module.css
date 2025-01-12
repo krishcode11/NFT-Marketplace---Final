@@ -1,0 +1,100 @@
+/* General Styling */
+.service {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #3b106dbb 0%, #39086e 100%); /* Dark gradient background */
+    text-align: center;
+    color: #fff;
+  }
+  
+  .service_box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  /* Service Item Styling */
+  .service_box_item {
+    background: #222; /* Dark background for each service box */
+    padding: 25px;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .service_box_item:hover {
+    transform: translateY(-10px); /* Slight hover lift effect */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5); /* Darker shadow for depth */
+  }
+  
+  /* Service Image Styling */
+  .service_image {
+    border-radius: 50%;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  .service_box_item:hover .service_image {
+    transform: scale(1.1); /* Zoom in on image on hover */
+  }
+  
+  /* Step Styling */
+  .service_box_item_step {
+    font-size: 14px;
+    color: #ff6f61; /* Accent color */
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  /* Heading Styling */
+  .service_box_item h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+  }
+  
+  /* Paragraph Styling */
+  .service_box_item p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #dcdcdc;
+    margin-bottom: 20px;
+  }
+  
+  /* Add animated button styling */
+  .service_box_item a {
+    text-decoration: none;
+    display: inline-block;
+    background: linear-gradient(45deg, #ff6f61, #fd7e14); /* Gradient button */
+    padding: 10px 30px;
+    color: #fff;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+  
+  .service_box_item a:hover {
+    background: linear-gradient(45deg, #fd7e14, #ff6f61); /* Reverse gradient on hover */
+  }
+  
+  /* Media Query for Responsiveness */
+  @media (max-width: 768px) {
+    .service_box {
+      grid-template-columns: 1fr; /* Stack items vertically on mobile */
+    }
+  
+    .service_box_item {
+      padding: 20px;
+    }
+  
+    .service_box_item h3 {
+      font-size: 20px; /* Slightly smaller heading for mobile */
+    }
+  }
+  

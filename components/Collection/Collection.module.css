@@ -1,0 +1,102 @@
+.collection {
+    width: 100%;
+    padding: 4rem 0 12rem;
+    background: linear-gradient(to bottom, rgba(13, 17, 23, 0.8), rgba(13, 17, 23, 0.95));
+  }
+  
+  .collection_title {
+    max-width: 35rem;
+    margin: 0 auto;
+    padding: 0 1rem 6rem;
+    text-align: center;
+  }
+  
+  .collection_title h2 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 4rem;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 10px rgba(99, 102, 241, 0.3);
+  }
+  
+  .collection_collections_btn {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    padding: 0.75rem;
+    border-radius: 4rem;
+    display: flex;
+    justify-content: space-around;
+    gap: 1.5rem;
+    align-items: center;
+    font-size: 1.2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .collection_collections_btn button {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: #ffffff;
+    padding: 1.2rem 2rem;
+    border: none;
+    border-radius: 4rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+  }
+  
+  .collection_collections_btn button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.4);
+    background: linear-gradient(135deg, #8b5cf6, #6366f1);
+  }
+  
+  .collection_box {
+    width: 85%;
+    max-width: 1440px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    perspective: 1000px;
+  }
+  
+  @media screen and (max-width: 425px) {
+    .collection_title {
+      width: 95%;
+    }
+  
+    .collection_title h2 {
+      font-size: 2.5rem;
+    }
+  
+    .collection_box {
+      width: 92%;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+  
+    .collection_collections_btn {
+      padding: 0.5rem;
+      gap: 1rem;
+    }
+  
+    .collection_collections_btn button {
+      padding: 0.8rem 1.5rem;
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media screen and (min-width: 426px) and (max-width: 1024px) {
+    .collection_title {
+      width: 92%;
+    }
+  
+    .collection_box {
+      width: 90%;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3rem;
+    }
+  }

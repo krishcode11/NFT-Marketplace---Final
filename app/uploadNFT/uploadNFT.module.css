@@ -1,0 +1,185 @@
+.upload {
+    width: 100%;
+    margin-block: 8rem;
+    padding: 4rem 0;
+}
+
+.upload_box {
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+}
+
+.upload_box h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+    background: linear-gradient(to right, #ff7eb3, #a855f7);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+.upload_box_input_para {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.upload_box_input {
+    margin-bottom: 2rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+.upload_box_input label {
+    display: block;
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 0.5rem;
+}
+
+.upload_box_input input,
+.upload_box_input textarea {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.upload_box_input input:focus,
+.upload_box_input textarea:focus {
+    outline: none;
+    border-color: #ff7eb3;
+    box-shadow: 0 0 0 2px rgba(255, 126, 179, 0.2);
+}
+
+.upload_box_input_file {
+    width: 100%;
+    border: 2px dashed rgba(255, 126, 179, 0.5);
+    padding: 1.5rem !important;
+    cursor: pointer;
+    text-align: center;
+    background: rgba(255, 126, 179, 0.05) !important;
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.upload_box_preview {
+    width: 200px;
+    height: 200px;
+    margin: 2rem auto;
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.upload_box_preview_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.error {
+    color: #ff4d4d;
+    background: rgba(255, 77, 77, 0.1);
+    border: 1px solid rgba(255, 77, 77, 0.2);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.upload_box_btn {
+    width: 100%;
+    max-width: 400px;
+    margin: 2rem auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #ff7eb3 0%, #a855f7 100%);
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(255, 126, 179, 0.2);
+    min-height: 3.5rem;
+}
+
+.upload_box_btn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.upload_box_btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 126, 179, 0.4);
+}
+
+.upload_box_btn:hover:before {
+    left: 100%;
+}
+
+.upload_box_btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 15px rgba(255, 126, 179, 0.3);
+}
+
+.upload_box_btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+    background: linear-gradient(135deg, #ccc 0%, #999 100%);
+    box-shadow: none;
+}
+
+@media screen and (max-width: 35em) {
+    .upload {
+        margin-block: 4rem;
+        padding: 2rem 0;
+    }
+
+    .upload_box {
+        width: 95%;
+        padding: 1.5rem;
+    }
+
+    .upload_box h1 {
+        font-size: 2rem;
+    }
+} 

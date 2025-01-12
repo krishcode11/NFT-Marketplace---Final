@@ -1,0 +1,451 @@
+.filter {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+    background: linear-gradient(to bottom, #0F172A, #1E1B4B);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animated Background Effects */
+.filter::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background: radial-gradient(circle at center,
+        rgba(99, 102, 241, 0.1) 0%,
+        rgba(99, 102, 241, 0.05) 25%,
+        transparent 70%
+    );
+    animation: rotate 30s linear infinite;
+    z-index: 1;
+}
+
+/* Toggle Button */
+.filter_toggle {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #6a1e74, #c82cdd);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 100;
+    box-shadow: 
+        0 4px 12px rgba(124, 58, 237, 0.3),
+        inset 0 2px 4px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.filter_toggle:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #c23ac2, #d32daf);
+    box-shadow: 
+        0 8px 20px rgba(124, 58, 237, 0.4),
+        inset 0 2px 4px rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.filter_toggle:active {
+    transform: translateY(1px);
+    box-shadow: 
+        0 2px 8px rgba(124, 58, 237, 0.3),
+        inset 0 1px 2px rgba(255, 255, 255, 0.1);
+}
+
+/* Header Section */
+.filter_header {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 0 1rem;
+}
+
+.filter_header h2 {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-weight: 800;
+    background: linear-gradient(to right, #fff, #94A3B8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.02em;
+}
+
+.filter_header p {
+    font-size: clamp(0.95rem, 1.5vw, 1rem);
+    color: #94A3B8;
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+/* Main Filter Box */
+.filter_box {
+    position: relative;
+    z-index: 2;
+    background: rgba(30, 41, 59, 0.7);
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    border-radius: 20px;
+    padding: 2rem;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 
+        0 20px 40px -12px rgba(0, 0, 0, 0.25),
+        0 0 0 1px rgba(255, 255, 255, 0.1);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Category Section */
+.filter_box_left {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    justify-content: center;
+}
+
+.filter_box_left_item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    user-select: none;
+}
+
+.filter_box_left_item:hover {
+    background: rgba(99, 102, 241, 0.1);
+    border-color: rgba(99, 102, 241, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.filter_box_left_item.active {
+    background: linear-gradient(135deg, #cc12c3, #f65ca9);
+    border: none;
+    box-shadow: 
+        0 8px 16px rgba(99, 102, 241, 0.2),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.filter_box_left_item_icon {
+    font-size: 1.25rem;
+    color: #94A3B8;
+    transition: all 0.3s ease;
+}
+
+.filter_box_left_item:hover .filter_box_left_item_icon,
+.filter_box_left_item.active .filter_box_left_item_icon {
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.filter_box_left_item p {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #94A3B8;
+    transition: color 0.3s ease;
+}
+
+.filter_box_left_item:hover p,
+.filter_box_left_item.active p {
+    color: #fff;
+}
+
+/* Search and Sort Section */
+.filter_box_right {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(148, 163, 184, 0.1);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Search Input */
+.filter_box_right_search {
+    position: relative;
+    width: 100%;
+}
+
+.search_icon {
+    position: absolute;
+    left: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94A3B8;
+    font-size: 1.2rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.filter_box_right_search input {
+    width: 100%;
+    padding: 1rem 1.25rem 1rem 3rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 2px solid rgba(255, 255, 255, 0.05);
+    border-radius: 14px;
+    color: #fff;
+    font-size: 0.95rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 
+        inset 0 2px 4px rgba(0, 0, 0, 0.1),
+        0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.filter_box_right_search input:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(99, 102, 241, 0.2);
+}
+
+.filter_box_right_search input:focus {
+    outline: none;
+    background: rgba(99, 102, 241, 0.08);
+    border-color: rgba(99, 102, 241, 0.5);
+    box-shadow: 
+        0 0 0 4px rgba(99, 102, 241, 0.1),
+        0 4px 12px rgba(99, 102, 241, 0.1);
+}
+
+.filter_box_right_search input:focus + .search_icon {
+    color: #6366F1;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.filter_box_right_search input::placeholder {
+    color: rgba(148, 163, 184, 0.7);
+    font-weight: 500;
+}
+
+/* Sort Dropdown */
+.filter_box_right_sort {
+    position: relative;
+    min-width: 180px;
+}
+
+.sort_select {
+    width: 100%;
+    padding: 1rem 3rem 1rem 1.25rem;
+    appearance: none;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(124, 58, 237, 0.1));
+    border: 2px solid rgba(255, 255, 255, 0.05);
+    border-radius: 14px;
+    color: #fff;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 
+        inset 0 2px 4px rgba(0, 0, 0, 0.1),
+        0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.sort_select:hover {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(124, 58, 237, 0.15));
+    border-color: rgba(99, 102, 241, 0.2);
+}
+
+.sort_select:focus {
+    outline: none;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(124, 58, 237, 0.2));
+    border-color: rgba(99, 102, 241, 0.5);
+    box-shadow: 
+        0 0 0 4px rgba(99, 102, 241, 0.1),
+        0 4px 12px rgba(99, 102, 241, 0.1);
+}
+
+.sort_select option {
+    background: #1E1B4B;
+    color: #fff;
+    padding: 1rem;
+    font-weight: 500;
+}
+
+.sort_icon {
+    position: absolute;
+    right: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94A3B8;
+    font-size: 1.1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.filter_box_right_sort:hover .sort_icon {
+    color: #6366F1;
+    transform: translateY(-50%) rotate(180deg);
+}
+
+/* Loading State */
+.loading_overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.7);
+    backdrop-filter: blur(8px);
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.loading_spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(99, 102, 241, 0.1);
+    border-top-color: #6366F1;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+/* Animations */
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1200px) {
+    .filter {
+        padding: 2.5rem 1.25rem;
+    }
+
+    .filter_box {
+        padding: 1.75rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .filter {
+        padding: 2rem 1rem;
+    }
+
+    .filter_toggle {
+        top: 1rem;
+        right: 1rem;
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+        font-size: 1rem;
+    }
+
+    .filter_header {
+        margin-bottom: 2rem;
+    }
+
+    .filter_box {
+        padding: 1.5rem;
+        border-radius: 16px;
+    }
+
+    .filter_box_left {
+        gap: 0.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .filter_box_left_item {
+        padding: 0.625rem 1rem;
+        font-size: 0.875rem;
+    }
+
+    .filter_box_right {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+
+    .filter_box_right_search input,
+    .sort_select {
+        padding: 0.875rem 1.25rem;
+        font-size: 0.9rem;
+        border-radius: 12px;
+    }
+
+    .sort_select {
+        padding-right: 2.5rem;
+    }
+
+    .filter_box_right_sort {
+        min-width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .filter_header h2 {
+        font-size: 1.75rem;
+    }
+
+    .filter_header p {
+        font-size: 0.875rem;
+    }
+
+    .filter_box_left_item {
+        padding: 0.5rem 0.875rem;
+        font-size: 0.8125rem;
+    }
+
+    .filter_box_left_item_icon {
+        font-size: 1rem;
+    }
+
+    .filter_toggle {
+        width: 32px;
+        height: 32px;
+        border-radius: 8px;
+        font-size: 0.9rem;
+    }
+
+    .filter_box_right_search input,
+    .sort_select {
+        padding: 0.75rem 1rem;
+        font-size: 0.875rem;
+        border-radius: 10px;
+    }
+
+    .search_icon {
+        left: 1rem;
+        font-size: 1rem;
+    }
+
+    .sort_icon {
+        right: 1rem;
+        font-size: 1rem;
+    }
+}
+
+/* Dark Mode Optimization */
+@media (prefers-color-scheme: dark) {
+    .filter_box {
+        background: rgba(30, 41, 59, 0.8);
+    }
+
+    .filter_box_left_item:hover {
+        background: rgba(99, 102, 241, 0.15);
+    }
+}
+  

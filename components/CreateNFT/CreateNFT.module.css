@@ -1,0 +1,387 @@
+.create_nft {
+    min-height: 100vh;
+    padding: 2rem;
+    background: linear-gradient(135deg, #13111C 0%, #1e0538 100%);
+    color: white;
+}
+
+.content_wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 24px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, #fff, #e0e0e0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.subtitle {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+}
+
+.form_container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+}
+
+/* Form Section Styles */
+.form_section {
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 20px;
+    padding: 2rem;
+}
+
+.upload_section {
+    width: 100%;
+    min-height: 300px;
+    border: 2px dashed rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.upload_section:hover {
+    border-color: rgba(106, 0, 255, 0.5);
+    background: rgba(106, 0, 255, 0.05);
+}
+
+.upload_placeholder {
+    height: 100%;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+.upload_icon {
+    font-size: 3rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.upload_placeholder p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.upload_placeholder span {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.preview_container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.preview_image {
+    object-fit: cover;
+}
+
+.remove_btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+.remove_btn:hover {
+    background: rgba(255, 51, 102, 0.3);
+    transform: rotate(90deg);
+}
+
+/* Form Groups */
+.form_group {
+    margin-bottom: 1.5rem;
+}
+
+.form_group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+}
+
+.form_group input,
+.form_group textarea,
+.form_group select {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form_group input:focus,
+.form_group textarea:focus,
+.form_group select:focus {
+    outline: none;
+    border-color: rgba(106, 0, 255, 0.5);
+    background: rgba(106, 0, 255, 0.05);
+}
+
+.form_row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.input_with_icon {
+    position: relative;
+}
+
+.input_icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6a00ff;
+}
+
+.input_with_icon input,
+.input_with_icon select {
+    padding-left: 2.8rem;
+}
+
+/* Properties Section */
+.properties_section {
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.properties_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.properties_header h3 {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
+}
+
+.add_property_btn {
+    padding: 0.5rem 1rem;
+    background: rgba(106, 0, 255, 0.1);
+    border: 1px solid rgba(106, 0, 255, 0.3);
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.add_property_btn:hover {
+    background: rgba(106, 0, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.property_row {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.remove_property_btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: rgba(255, 51, 102, 0.1);
+    border: none;
+    color: #ff3366;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.remove_property_btn:hover {
+    background: rgba(255, 51, 102, 0.2);
+    transform: rotate(90deg);
+}
+
+/* Create Button */
+.create_btn {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(45deg, #6a00ff, #8a2be2);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.create_btn:hover {
+    background: linear-gradient(45deg, #7a1fff, #9b3bf3);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(106, 0, 255, 0.3);
+}
+
+/* Preview Section */
+.preview_section {
+    position: sticky;
+    top: 2rem;
+}
+
+.preview_section h3 {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.preview_card {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.preview_image_container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.preview_placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.preview_info {
+    padding: 1.5rem;
+}
+
+.preview_info h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.preview_description {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.preview_price {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #6a00ff;
+    font-weight: 600;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1200px) {
+    .form_container {
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .form_container {
+        grid-template-columns: 1fr;
+    }
+
+    .preview_section {
+        position: relative;
+        top: 0;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .content_wrapper {
+        padding: 1.5rem;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .form_row {
+        grid-template-columns: 1fr;
+    }
+
+    .property_row {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .remove_property_btn {
+        grid-column: span 2;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .create_nft {
+        padding: 1rem;
+    }
+
+    .content_wrapper {
+        padding: 1rem;
+    }
+
+    .upload_section {
+        min-height: 200px;
+    }
+
+    .preview_image_container {
+        height: 200px;
+    }
+} 

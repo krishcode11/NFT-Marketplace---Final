@@ -1,0 +1,136 @@
+.NFTTabs {
+  margin-top: 2rem;
+}
+
+.tabButtons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid var(--shadow-dark-color);
+}
+
+.tabButton {
+  padding: 1rem 2rem;
+  background: none;
+  border: none;
+  font-weight: 600;
+  color: var(--icons-color);
+  cursor: pointer;
+  position: relative;
+  transition: all .3s ease;
+}
+
+.tabButton:hover {
+  color: var(--main-bg-color);
+}
+
+.tabButton.active {
+  color: var(--main-bg-color);
+}
+
+.tabButton.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--main-bg-color);
+}
+
+.tabContent {
+  padding: 1rem 0;
+}
+
+/* Details Tab */
+.description h3 {
+  margin-bottom: 1rem;
+  color: var(--icons-color);
+  font-size: 1.3rem;
+}
+
+.description p {
+  color: var(--icons-color);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.propertiesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.property {
+  background: var(--main-bg-color);
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: var(--box-shadow);
+}
+
+.property span {
+  color: var(--icons-color);
+  font-size: 0.9rem;
+}
+
+.property p {
+  color: var(--icons-color);
+  font-weight: 600;
+  margin: 0.5rem 0 0 0;
+}
+
+/* History Tab */
+.historyItem {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--shadow-dark-color);
+}
+
+.historyIcon {
+  background: var(--main-bg-color);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--icons-color);
+  box-shadow: var(--box-shadow);
+}
+
+.historyDetails h4 {
+  margin: 0;
+  color: var(--icons-color);
+  font-size: 1.1rem;
+}
+
+.historyDetails p {
+  color: var(--icons-color);
+  margin: 0.25rem 0;
+}
+
+.historyDetails span {
+  color: var(--icons-color);
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media screen and (max-width: 35em) {
+  .tabButton {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .propertiesGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (min-width: 36em) and (max-width: 50em) {
+  .propertiesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

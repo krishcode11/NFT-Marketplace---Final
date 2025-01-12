@@ -1,0 +1,211 @@
+.navbar {
+    width: 100%;
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    background-color: rgba(26, 26, 46, 0.95);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.navbar_container {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.navbar_container_left {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    background: linear-gradient(to right, #fff, #ff7eb3);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.navbar_container_right {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+/* Navigation Buttons */
+.nav_button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: white;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    user-select: none;
+}
+
+.nav_button:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+    border-color: rgba(255, 126, 179, 0.3);
+    box-shadow: 0 4px 15px rgba(255, 126, 179, 0.15);
+}
+
+.nav_icon {
+    font-size: 1.3rem;
+    color: #ff7eb3;
+    transition: transform 0.3s ease;
+}
+
+.nav_button:hover .nav_icon {
+    transform: scale(1.1);
+}
+
+/* Dropdown Boxes */
+.discover_box,
+.help_box,
+.notification_box,
+.profile_box {
+    position: relative;
+}
+
+.discover_box_items,
+.help_box_items,
+.notification_box_items,
+.profile_box_items {
+    position: absolute;
+    top: calc(100% + 1rem);
+    right: 0;
+    min-width: 280px;
+    background: rgba(26, 26, 46, 0.98);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    animation: dropdownFade 0.3s ease;
+    transform-origin: top right;
+    z-index: 1000;
+}
+
+@keyframes dropdownFade {
+    from {
+        opacity: 0;
+        transform: scale(0.95) translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Connect Wallet Button */
+.connect_wallet_box {
+    position: relative;
+}
+
+.connect_wallet_button {
+    background: linear-gradient(135deg, #ff7eb3 0%, #a855f7 100%);
+    color: white !important;
+    padding: 0.8rem 1.5rem;
+    border-radius: 12px;
+    border: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    min-width: 160px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(255, 126, 179, 0.2);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.connect_wallet_button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 126, 179, 0.3);
+}
+
+.connect_wallet_button.connected {
+    background: rgba(255, 126, 179, 0.1);
+    border: 1px solid #ff7eb3;
+    color: #ff7eb3 !important;
+    box-shadow: none;
+}
+
+.connect_wallet_button.connected:hover {
+    background: rgba(255, 126, 179, 0.15);
+    border-color: #ff7eb3;
+}
+
+/* Notification Badge */
+.notification_badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #ff7eb3;
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.2rem 0.5rem;
+    border-radius: 10px;
+    border: 2px solid rgba(26, 26, 46, 0.95);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .navbar_container {
+        width: 95%;
+    }
+
+    .nav_button span {
+        display: none;
+    }
+
+    .nav_button {
+        padding: 0.8rem;
+    }
+
+    .connect_wallet_button {
+        padding: 0.8rem 1.2rem;
+        min-width: auto;
+    }
+
+    .discover_box_items,
+    .help_box_items,
+    .notification_box_items,
+    .profile_box_items {
+        width: 260px;
+        right: -50%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .navbar_container {
+        gap: 0.8rem;
+    }
+
+    .discover_box_items,
+    .help_box_items,
+    .notification_box_items,
+    .profile_box_items {
+        width: 240px;
+        right: -100%;
+    }
+}

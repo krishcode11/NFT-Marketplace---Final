@@ -1,0 +1,186 @@
+.AuthorTaps {
+  width: 100%;
+  margin: 4rem 0 3rem 0;
+  position: relative;
+  z-index: 10;
+}
+
+.AuthorTaps_box {
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.AuthorTaps_box_left_btn {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.tab_button {
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  outline: none;
+  background-color: transparent;
+  font-size: 1rem;
+  border-radius: 1rem;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.tab_button:hover {
+  background: rgba(99, 102, 241, 0.1);
+  border-color: rgba(99, 102, 241, 0.4);
+  transform: translateY(-2px);
+}
+
+.tab_button.active {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  border-color: transparent;
+  color: white;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+}
+
+.AuthorTaps_box_right {
+  position: relative;
+}
+
+.AuthorTaps_box_right_para {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 0.75rem 1.5rem;
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.AuthorTaps_box_right_para:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(99, 102, 241, 0.2);
+}
+
+.AuthorTaps_box_right_para p {
+  font-size: 1rem;
+  margin: 0;
+  color: #fff;
+}
+
+.AuthorTaps_box_right_list {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  background: rgba(31, 41, 55, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.5rem;
+  min-width: 200px;
+  border-radius: 1rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+}
+
+.AuthorTaps_box_right_list_item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+  color: #fff;
+}
+
+.AuthorTaps_box_right_list_item:hover {
+  background: rgba(99, 102, 241, 0.1);
+}
+
+.AuthorTaps_box_right_list_item p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.AuthorTaps_box_right_list_item span {
+  color: #6366f1;
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .AuthorTaps {
+    margin: 3rem 0;
+  }
+
+  .AuthorTaps_box {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1.5rem;
+    width: 95%;
+  }
+
+  .AuthorTaps_box_left_btn {
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  .tab_button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .AuthorTaps_box_right {
+    width: 100%;
+  }
+
+  .AuthorTaps_box_right_para {
+    width: 100%;
+  }
+
+  .AuthorTaps_box_right_list {
+    width: 100%;
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .AuthorTaps {
+    margin: 2rem 0;
+  }
+
+  .AuthorTaps_box {
+    padding: 1rem;
+  }
+
+  .tab_button {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    flex: 1;
+    min-width: calc(50% - 0.5rem);
+    text-align: center;
+  }
+
+  .AuthorTaps_box_right_para {
+    padding: 0.6rem 1rem;
+  }
+
+  .AuthorTaps_box_right_list_item {
+    padding: 0.6rem 0.8rem;
+  }
+}

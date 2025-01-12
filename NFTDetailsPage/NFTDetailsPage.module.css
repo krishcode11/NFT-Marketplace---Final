@@ -1,0 +1,195 @@
+/* General Styling */
+.root {
+    --main-bg-color: #f80c6e; /* Dark background */
+    --secondary-bg-color: #f8f9fa; /* Light background for sections */
+    --accent-color: #1868f2; /* Blue for main buttons */
+    --hover-bg-color: #1557d0; /* Darker blue for button hover */
+    --text-color: #333; /* Text color */
+    --text-muted: #666; /* Muted text color */
+    --button-radius: 12px; /* Button border radius */
+    --box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    --transition-duration: 0.3s; /* Transition duration for hover effects */
+}
+
+.container {
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    background: var(--main-bg-color);
+    font-family: 'Roboto', sans-serif;
+}
+
+.nftContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.imageSection {
+    position: sticky;
+    top: 2rem;
+    height: fit-content;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    background: var(--secondary-bg-color);
+    transition: transform var(--transition-duration) ease, box-shadow var(--transition-duration) ease;
+}
+
+.imageSection:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgb(245, 239, 239); /* Deeper shadow */
+}
+
+.detailsSection {
+    padding: 1.5rem;
+    background: var(--secondary-bg-color);
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow);
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+.priceSection {
+    background: var(--secondary-bg-color);
+    padding: 1.5rem;
+    border-radius: var(--button-radius);
+    margin-bottom: 2rem;
+    box-shadow: var(--box-shadow);
+}
+
+.currentPrice {
+    margin-bottom: 1.5rem;
+}
+
+.currentPrice span:first-child {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.priceValue {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.priceValue svg {
+    font-size: 1.8rem;
+}
+
+.buyButton, .makeOfferButton {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: var(--button-radius);
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all var(--transition-duration) ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+}
+
+.buyButton {
+    background: var(--accent-color);
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.makeOfferButton {
+    background: white;
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+}
+
+.buyButton:hover {
+    background: var(--hover-bg-color);
+    transform: translateY(-2px);
+    box-shadow: var(--box-shadow);
+}
+
+.makeOfferButton:hover {
+    background: var(--accent-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: var(--box-shadow);
+}
+
+/* Hover animation for buttons */
+.buyButton::after, .makeOfferButton::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.buyButton:hover::after, .makeOfferButton:hover::after {
+    width: 300px;
+    height: 300px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .container {
+        padding: 2rem;
+    }
+
+    .nftContent {
+        gap: 2rem;
+    }
+
+    .imageSection {
+        position: relative;
+        top: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .priceValue {
+        font-size: 1.8rem;
+    }
+
+    .buyButton, .makeOfferButton {
+        padding: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .detailsSection,
+    .priceSection {
+        padding: 1.5rem;
+    }
+
+    .priceValue {
+        font-size: 1.5rem;
+    }
+}

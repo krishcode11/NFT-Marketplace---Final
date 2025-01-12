@@ -1,0 +1,130 @@
+.sliderCard {
+  padding: 1rem;
+}
+
+.sliderCard_box {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  padding: 1rem;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.sliderCard_box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.sliderCard_box_img {
+  position: relative;
+  height: 300px;
+  width: 100%;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.sliderCard_box_img_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  transition: transform 0.6s ease;
+}
+
+.sliderCard_box:hover .sliderCard_box_img_img {
+  transform: scale(1.1);
+}
+
+.sliderCard_box_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.sliderCard_box_title p {
+  font-size: 1.2rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sliderCard_box_title_like {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sliderCard_box_title_like:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.sliderCard_box_price {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2rem;
+  padding: 1rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  line-height: 1;
+}
+
+.sliderCard_box_price_box,
+.sliderCard_box_price_time {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.sliderCard_box_price_box p {
+  font-weight: 700;
+  color: #22c55e;
+  font-size: 1.1rem;
+}
+
+.sliderCard_box_price_time p {
+  font-weight: 700;
+  color: #f59e0b;
+  font-size: 1.1rem;
+}
+
+.sliderCard_box_price small {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #94a3b8;
+}
+
+@media screen and (max-width: 35em) {
+  .sliderCard {
+    padding: 0.5rem;
+  }
+
+  .sliderCard_box_img {
+    height: 250px;
+  }
+
+  .sliderCard_box_title p {
+    font-size: 1rem;
+  }
+
+  .sliderCard_box_price {
+    gap: 1rem;
+  }
+
+  .sliderCard_box_price_box p,
+  .sliderCard_box_price_time p {
+    font-size: 1rem;
+  }
+}

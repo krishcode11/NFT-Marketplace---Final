@@ -1,0 +1,97 @@
+.walletWrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.walletButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(to right, #4F46E5, #7C3AED);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.walletButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.2);
+}
+
+.walletIcon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+.dropdown {
+  position: absolute;
+  top: 120%;
+  right: 0;
+  width: 320px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  padding: 1rem;
+  z-index: 1000;
+}
+
+.dropdownHeader {
+  padding: 0.75rem;
+  border-bottom: 1px solid #eee;
+  font-weight: 600;
+  color: #1F2937;
+}
+
+.addressBox {
+  margin: 1rem 0;
+  padding: 1rem;
+  background: #F3F4F6;
+  border-radius: 12px;
+}
+
+.addressActions {
+  margin-top: 0.75rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.addressActions button,
+.addressActions a {
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  color: #4F46E5;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.addressActions button:hover,
+.addressActions a:hover {
+  text-decoration: underline;
+}
+
+.disconnectButton {
+  width: 100%;
+  padding: 0.75rem;
+  background: #EF4444;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.disconnectButton:hover {
+  background: #DC2626;
+}
+
+@media (max-width: 768px) {
+  .dropdown {
+    width: 280px;
+  }
+} 

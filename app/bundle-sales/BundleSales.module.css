@@ -1,0 +1,328 @@
+.bundle_sales {
+    min-height: 100vh;
+    padding: 8rem 0 4rem;
+    background: linear-gradient(180deg, rgba(26, 26, 46, 0.95) 0%, rgba(26, 26, 46, 0.98) 100%);
+}
+
+.bundle_container {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Header Section */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(to right, #fff, #ff7eb3);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tab_buttons {
+    display: flex;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tab_button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.95rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.tab_button:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.tab_button.active {
+    background: rgba(255, 126, 179, 0.2);
+    color: #ff7eb3;
+}
+
+/* Bundles Grid */
+.bundles_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.bundle_card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.bundle_card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 126, 179, 0.3);
+    box-shadow: 0 8px 25px rgba(255, 126, 179, 0.15);
+}
+
+/* Bundle Header */
+.bundle_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.bundle_header h3 {
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.savings_badge {
+    background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.bundle_description {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+/* Bundle Items */
+.bundle_items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 12px;
+}
+
+.bundle_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.item_image {
+    width: 100px;
+    height: 100px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nft_image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.nft_image:hover {
+    transform: scale(1.05);
+}
+
+.item_name {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100px;
+}
+
+/* Bundle Info */
+.bundle_info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+}
+
+.price_info span {
+    display: block;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.price svg {
+    color: #ff7eb3;
+}
+
+.creator_info {
+    text-align: right;
+}
+
+.creator_info span:first-child {
+    display: block;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+}
+
+.creator_address {
+    color: #ff7eb3;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.9rem;
+}
+
+/* Bundle Actions */
+.bundle_actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.info_button,
+.purchase_button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.info_button {
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    flex: 1;
+}
+
+.info_button:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.purchase_button {
+    background: linear-gradient(135deg, #ff7eb3 0%, #a855f7 100%);
+    color: white;
+    flex: 2;
+}
+
+.purchase_button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 126, 179, 0.3);
+}
+
+.purchase_button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Create Bundle Button */
+.create_bundle_button {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #ff7eb3 0%, #a855f7 100%);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.create_bundle_button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 126, 179, 0.3);
+}
+
+.create_bundle_button svg {
+    font-size: 1.4rem;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .bundle_container {
+        width: 95%;
+    }
+
+    .header {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: flex-start;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .bundles_grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bundle_info {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .creator_info {
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .bundle_actions {
+        flex-direction: column;
+    }
+
+    .info_button,
+    .purchase_button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .tab_buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .bundle_items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+} 

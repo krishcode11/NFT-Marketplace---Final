@@ -1,0 +1,359 @@
+.authorContainer {
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    rgba(13, 17, 23, 0.95) 0%,
+    rgba(23, 13, 45, 0.97) 100%
+  );
+  position: relative;
+  overflow: hidden;
+  padding-top: 100px;
+}
+
+/* Hero Section */
+.heroSection {
+  position: relative;
+  width: 100%;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 4rem 0;
+  margin-bottom: 3rem;
+  margin-top: 2rem;
+}
+
+.heroBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.heroBackground img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(13, 17, 23, 0.5) 0%,
+    rgba(13, 17, 23, 0.95) 100%
+  );
+  z-index: 2;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 3;
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 3rem 2rem;
+  gap: 2rem;
+}
+
+.authorAvatar {
+  position: relative;
+  margin-bottom: 1rem;
+  width: 180px;
+  height: 180px;
+}
+
+.avatarImage {
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.verifiedBadge {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: #6366f1;
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid white;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+  z-index: 4;
+}
+
+.authorInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.authorInfo h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  line-height: 1.4;
+  background: linear-gradient(135deg, #fff 0%, #94A3B8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.verifiedText {
+  font-size: 1rem;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  -webkit-text-fill-color: white;
+  white-space: nowrap;
+}
+
+.authorBio {
+  font-size: 1.1rem;
+  color: #94A3B8;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+  padding: 0 1rem;
+}
+
+/* Stats Grid */
+.statsGrid {
+  width: 90%;
+  max-width: 1400px;
+  margin: 2rem auto 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  position: relative;
+  z-index: 3;
+}
+
+.statCard {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.statCard:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(99, 102, 241, 0.3);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.statIcon {
+  font-size: 1.5rem;
+  color: #6366f1;
+  background: rgba(99, 102, 241, 0.1);
+  padding: 1rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 3.5rem;
+}
+
+.statInfo {
+  flex: 1;
+}
+
+.statInfo h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.statInfo p {
+  font-size: 0.9rem;
+  color: #94A3B8;
+  margin: 0.5rem 0 0;
+  white-space: nowrap;
+}
+
+/* Profile Section */
+.profileSection {
+  width: 90%;
+  max-width: 1400px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+}
+
+/* Tabs Section */
+.tabsSection {
+  width: 90%;
+  max-width: 1400px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+}
+
+/* NFT Grid Section */
+.nftGridSection {
+  width: 90%;
+  max-width: 1400px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+}
+
+/* Popular Creators Section */
+.popularCreatorsSection {
+  width: 90%;
+  max-width: 1400px;
+  margin: 4rem auto;
+  padding: 4rem 2rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .authorContainer {
+    padding-top: 80px;
+  }
+
+  .heroSection {
+    min-height: 60vh;
+    padding: 3rem 0;
+  }
+
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .authorContainer {
+    padding-top: 70px;
+  }
+
+  .heroSection {
+    min-height: 50vh;
+    padding: 2rem 0;
+  }
+
+  .heroContent {
+    padding: 2rem 1rem;
+  }
+
+  .statsGrid {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .authorAvatar {
+    width: 150px;
+    height: 150px;
+  }
+
+  .profileSection,
+  .tabsSection,
+  .nftGridSection,
+  .popularCreatorsSection {
+    width: 95%;
+    padding: 0 1rem;
+    margin: 2rem auto;
+  }
+
+  .statCard {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .statIcon {
+    padding: 0.8rem;
+    font-size: 1.2rem;
+    min-width: 3rem;
+  }
+
+  .statInfo h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .authorContainer {
+    padding-top: 60px;
+  }
+
+  .heroSection {
+    min-height: 40vh;
+  }
+
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .authorInfo h1 {
+    font-size: 1.8rem;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .verifiedText {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .authorBio {
+    font-size: 1rem;
+    padding: 0;
+  }
+
+  .authorAvatar {
+    width: 120px;
+    height: 120px;
+  }
+
+  .verifiedBadge {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+/* Animation for background gradient */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

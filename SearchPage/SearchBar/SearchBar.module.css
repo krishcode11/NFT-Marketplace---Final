@@ -1,0 +1,91 @@
+.SearchBar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+  }
+  
+  .SearchBar_box {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    max-width: 600px;
+    background: #f0f0f0;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .SearchBar_box:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .SearchBar_box_icon {
+    font-size: 1.5rem;
+    color: #888;
+    margin-right: 0.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  .SearchBar_box_icon:hover {
+    color: #000;
+  }
+  
+  .SearchBar_box input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1rem;
+    padding: 0.5rem;
+    color: #333;
+  }
+  
+  .SearchBar_box input::placeholder {
+    color: #aaa;
+  }
+  
+  .SearchBar_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  .SearchBar_button:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+  }
+  
+  .SearchBar_button:active {
+    transform: translateY(0);
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .SearchBar_box {
+      width: 95%;
+    }
+  
+    .SearchBar_box_icon {
+      font-size: 1.2rem;
+    }
+  
+    .SearchBar_box input {
+      font-size: 0.9rem;
+    }
+  
+    .SearchBar_button {
+      font-size: 0.9rem;
+      padding: 0.4rem 0.6rem;
+    }
+  }
+  

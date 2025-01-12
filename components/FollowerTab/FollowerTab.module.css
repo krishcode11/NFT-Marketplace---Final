@@ -1,0 +1,108 @@
+.followerTab {
+    width: 100%;
+    padding: 6rem 1rem;
+    position: relative;
+  }
+  
+  .followerTab_title {
+    max-width: 30rem;
+    margin: 0 auto 2rem;
+    text-align: center;
+    border-width: 1px;
+    border-color: var(--icons-color);
+    border-style: solid;
+    border-radius: 10rem;
+    padding: 1rem;
+  }
+  
+  .followerTab_title h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 0rem;
+    border-radius: 100rem;
+  }
+  
+  .followerTab_tabs_btn {
+    background: var(--main-bg-color);
+    padding: 0.5rem 1rem;
+    border-radius: 4rem;
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    align-items: center;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    box-shadow: var(--box-shadow);
+  }
+  
+  .followerTab_tabs_btn button {
+    background: var(--icons-color);
+    color: aquamarine;
+    padding: clamp(0.5rem, 2vw, 1rem);
+    border: 1px solid var(--icons-color);
+    border-radius: 4rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .followerTab_tabs_btn button:hover {
+    background: transparent;
+    color: aquamarine;
+  }
+  
+  .followerTab_box {
+    width: min(90%, 1200px);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    color: aquamarine;
+  }
+  
+  .followerTab_member {
+    text-align: center;
+  }
+  
+  .followerTab_member_box {
+    padding-top: 7rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: aquamarine;
+    gap: 1rem;
+  }
+  
+  .followerTab_member_box a {
+    background: var(--icons-color);
+    padding: clamp(0.5rem, 2vw, 1rem) clamp(1rem, 3vw, 2rem);
+    color: aquamarine;
+    border-radius: 2rem;
+    border: 1px solid var(--icons-color);
+    box-shadow: var(--box-shadow);
+    font-size: clamp(0.8rem, 2vw, 1.3rem);
+    transition: all 0.3s ease;
+  }
+  
+  .followerTab_member_box a:first-child {
+    background: transparent;
+    color: aquamarine;
+  }
+  
+  .followerTab_member_box a:hover {
+    background: var(--icons-color);
+    color: aquamarine;
+  }
+  
+  @media (max-width: 768px) {
+    .followerTab_title {
+      width: 90%;
+    }
+    
+    .followerTab_box {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 425px) {
+    .followerTab_box {
+      grid-template-columns: 1fr;
+    }
+  }
